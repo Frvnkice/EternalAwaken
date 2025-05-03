@@ -1,0 +1,70 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 3rem;
+  height: calc(100vh - 3rem);
+  background-color: var(--surface-2);
+  border-right: 1px solid var(--surface-2);
+  width: 57px;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.sidebar.expanded {
+  width: 200px;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  width: 200px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.sidebar-item:hover {
+  background-color: var(--surface-1);
+}
+
+.sidebar-item.active {
+  background-color: var(--surface-1);
+  border-left: 2px solid var(--primary);
+}
+
+.sidebar-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.sidebar-item:hover .sidebar-icon,
+.sidebar-item.active .sidebar-icon {
+  color: var(--primary-variant);
+}
+
+.sidebar-text {
+  font-family: var(--font-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.sidebar-item:hover .sidebar-text,
+.sidebar-item.active .sidebar-text {
+  color: var(--text-primary);
+}

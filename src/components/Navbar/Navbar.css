@@ -1,0 +1,256 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--surface-1);
+  border-bottom: 1px solid var(--surface-2);
+  height: 3rem;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-title {
+  font-family: var(--font-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.navbar-divider {
+  height: 1.25rem;
+  width: 1px;
+  background-color: var(--surface-2);
+}
+
+.navbar-tab {
+  font-family: var(--font-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navbar-tab:hover {
+  color: var(--primary);
+}
+
+.navbar-title:hover {
+  color: var(--primary);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.notification-icon {
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.notification-icon:hover {
+  color: var(--text-primary);
+}
+
+.user-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar-username {
+  font-family: var(--font-secondary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 0.25rem 0.75rem;
+  background-color: var(--surface-2);
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.user-menu:hover .navbar-username {
+  background-color: var(--surface-1);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background-color: var(--surface-2);
+  border: 1px solid var(--surface-1);
+  border-radius: 4px;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown-item {
+  font-family: var(--font-secondary);
+  font-size: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dropdown-item:hover {
+  background-color: var(--surface-1);
+  color: var(--text-primary);
+}
+
+.dropdown-item.logout:hover {
+  color: #ff4444;
+}
+
+.dropdown-item.logout:hover svg {
+  stroke: #ff4444;
+}
+
+.dropdown-item svg {
+  transition: stroke 0.2s ease;
+}
+
+
+.rank-badge {
+  font-family: var(--font-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.rank-none {
+  background-color: var(--surface-2);
+  color: var(--text-secondary);
+}
+
+.rank-e {
+  background: linear-gradient(to right, #D3D3D3, #A9A9A9);
+  color: #fff;
+  animation: flicker 2s infinite;
+}
+
+.rank-d {
+  background: linear-gradient(to right, #9ACD32, #556B2F);
+  color: #fff;
+  animation: dRankGlow 3s infinite;
+}
+
+@keyframes dRankGlow {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.rank-c {
+  background: linear-gradient(to right, #5F9EA0, #4682B4);
+  color: #fff;
+  animation: glow 2s infinite;
+}
+
+.rank-b {
+  background: linear-gradient(to right, #BA55D3, #663399);
+  color: #fff;
+  animation: swirl 3s infinite;
+}
+
+.rank-a {
+  background: linear-gradient(to right, #FF6347, #B22222);
+  color: #fff;
+  animation: ember 2s infinite;
+}
+
+.rank-s {
+  background: linear-gradient(to right, #FFD700, #FFA500);
+  color: #fff;
+  animation: shine 2s infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.rank-reawakened {
+  background: radial-gradient(circle, #000000 0%, #003366 100%);
+  color: #00BFFF;
+  animation: darkAura 3s infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes glow {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.2); }
+  100% { filter: brightness(1); }
+}
+
+@keyframes swirl {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes ember {
+  0% { background-position: 0% 50%; }
+  50% { filter: brightness(1.2); }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes shine {
+  0% { filter: brightness(1); }
+  30% { filter: brightness(1.05); } /* Reduced from 1.3 */
+  50% { filter: brightness(1.15); } /* Reduced from 1.5 */
+  70% { filter: brightness(1.05); } /* Reduced from 1.3 */
+  100% { filter: brightness(1); }
+}
+
+@keyframes darkAura {
+  0% { box-shadow: 0 0 10px #00BFFF; }
+  50% { box-shadow: 0 0 20px #00BFFF; }
+  100% { box-shadow: 0 0 10px #00BFFF; }
+}
+
+.rank-s::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.08); /* Reduced from 0.1 */
+  transform: rotate(45deg);
+  animation: particleShine 2s infinite;
+}
+
+@keyframes particleShine {
+  0% { transform: rotate(45deg) translateY(-100%); }
+  100% { transform: rotate(45deg) translateY(100%); }
+}
+
+/* Remove everything below this line as it's the old awaken button styles that are no longer needed */

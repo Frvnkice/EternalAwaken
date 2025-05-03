@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Chakra+Petch:wght@300;400;500;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Rajdhani', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #000dc4;
+  --primary-variant: #004ec4;
+  --surface: #121212;
+  --surface-1: #1e1e1e;
+  --surface-2: #2c2c2c;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  
+  /* Font variables */
+  --font-main: 'Rajdhani', sans-serif;
+  --font-secondary: 'Chakra Petch', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
