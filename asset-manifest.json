@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/EternalAwaken/static/css/main.70e8580f.css",
+    "main.js": "/EternalAwaken/static/js/main.c49da61f.js",
+    "static/js/453.df384fd9.chunk.js": "/EternalAwaken/static/js/453.df384fd9.chunk.js",
+    "index.html": "/EternalAwaken/index.html",
+    "main.70e8580f.css.map": "/EternalAwaken/static/css/main.70e8580f.css.map",
+    "main.c49da61f.js.map": "/EternalAwaken/static/js/main.c49da61f.js.map",
+    "453.df384fd9.chunk.js.map": "/EternalAwaken/static/js/453.df384fd9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.70e8580f.css",
+    "static/js/main.c49da61f.js"
+  ]
+}
